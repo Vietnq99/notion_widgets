@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+	<!-- Google Font -->
+
+	 <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+	<!-------->
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+
+		.navMenu {
+			font-family: 'Roboto', sans-serif;
+			padding: 10px;
+			text-align: center;
+			margin: 7px auto;
+			width: auto;
+		}
+
+		.navMenu a {
+			color: #272727;
+			text-decoration: none;
+			text-transform: uppercase;
+			display: inline-block;
+			padding: 10px;
+		}
+
+		.background {
+			background-color: #ece5f0;
+		}
+
+		.border {
+			border: 1px solid #cccccc;
+
+		}
+
+		.navMenu a:hover {
+
+			color: #d09c0b;
+		}
+	</style>
+</head>
+
+<body>
+
+	<nav class="navMenu  border">
+		<a id="trang-chu" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-house"></i> Trang Chủ</a>
+		<a id="bai-viet" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-square-pen"></i> Bài Viết</a>
+		<a id="lien-he" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-address-book"></i> Liên Hệ</a>
+	</nav>
+
+
+	<script>
+
+		let direction = "horizontal";
+		if (direction === "vertical") {
+			document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
+		}
+
+
+		function navigate(id) {
+
+			if (id == 'trang-chu')
+				window.open("https://vietnq.com/", '_parent').focus();
+			else if (id == "bai-viet")
+				window.open("https://vietnq.com/bai-viet", '_parent').focus();
+			else if (id == "lien-he")
+				window.open("https://vietnq.com/lien-he", '_parent').focus();
+		}
+	</script>
+
+
+</body>
+
+</html>
